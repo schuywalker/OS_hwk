@@ -5,27 +5,67 @@ Ch14 Memory API (code)
 Questions
 
 1. First, write a simple program called null.c that creates a pointer to an integer, sets it to NULL, and then tries to dereference it. Compile this into an executable called null. What happens when you run this program?
+	
 	compiles fine, but when run, output is:
 	[1]    54703 segmentation fault  ./null
-	I think this means that the address location is outside the bounds of the process (because in c, NULL means it's at a random address instead of "nothing").
+	I think this means that the address location is outside the bounds of the process 
+	(because in c, NULL means it's at a random address instead of "nothing").
 
-2. Next,compile this program with symbol information included (with the -g flag). Doing so let’s put more information into the exe- cutable, enabling the debugger to access more useful information about variable names and the like. Run the program under the de- bugger by typing gdb null and then, once gdb is running, typing run. What does gdb show you?
-	Aside from the abundance of warnings I get for using OSX, it shows us the pid: "Unable to find Mach task port for process-id 58076: (os/kern) failure (0x5)."
+2. Next,compile this program with symbol information included (with the -g flag). 
+Doing so let’s put more information into the executable, enabling the debugger to access 
+more useful information about variable names and the like. 
+Run the program under the debugger by typing gdb null and then, once gdb is running, typing run. What does gdb show you?
+	
+	Aside from the abundance of warnings I get for using OSX, 
+	it shows us the pid: "Unable to find Mach task port for process-id 58076: (os/kern) failure (0x5)."
 
 3. Finally,use the valgrind tool on this program. We’ll use the memcheck tool that is a part of valgrind to analyze what happens. Run
 this by typing in the following: valgrind --leak-check=yes null. What happens when you run this? Can you interpret the output from the tool?
+	
+switching to linux for this...
+	- Invalid read size of 4 - this is referring to the 4 bytes that are allocated for int x.
+	- Address 0x0 is not stack's, malloc'd or (recently) free'd - I'm confused by this since 0x0 is the base address, but it seems like it's 
+	referring to int x as 0x0...
+	- SIGSEGV: dumping core (signal 11) - different than SEGFAULT we got before. Valgrind has more specific error handling installed.
+	- Tells us the main thread stack size in this run was 8388608, and that heap used 0 bytes for blocks of code, allocs, frees, and bytes...
+	
 
+4. Write a simple program that allocates memory using malloc() but forgets to free it before exiting. 
+What happens when this program runs? Can you use gdb to find any problems with it? How about valgrind (again with the --leak-check=yes flag)?
+		my program declares a global char pointer, then initializes it to malloc of 3 char pointers, then assigns the chars and prints them.
+		gdb doesn't give any good info...
+		
+valgrind --leak-check=yes ./p4forgetToFree.o 
+		- Leak Summary finds 3 bytes that were leaked in the 'still reachable' section (meaning there was still a pointer to access them).
+Running with --leak-check=full --show-leak-kinds=all in order to see more details
+		- now it tells us the stack trace with memory locations of the instructions:
+			3 bytes in 1 blocks are still reachable in loss record 1 of 1
+			at 0x484486F: malloc (vg_replace_malloc.c:381)
+			by 0x40114E: main (p4forgetToFree.c:9)
+Changed program to try to get non-reachable leaks:
+		- now p4forgetToFree.c reassigns p with malloc(2)
+		- Leak summary shows the 3 originally allocated bytes as 'definitely lost'.
 
-4. Write a simple program that allocates memory using malloc() but forgets to free it before exiting. What happens when this program runs? Can you use gdb to find any problems with it? How about valgrind (again with the --leak-check=yes flag)?
+5. Write a program that creates an array of integers called data of size 100 using malloc; 
+then, set data[100] to zero. What happens when you run this program? 
+What happens when you run this program using valgrind? Is the program correct?
+	We get 100 lost bytes in the 'definitely lost' category. They're still in use in heap at exit.
 
-
-5. Write a program that creates an array of integers called data of size 100 using malloc; then, set data[100] to zero. What happens when you run this program? What happens when you run this program using valgrind? Is the program correct?
-
-
-6. Create a program that allocates an array of integers (asabove),frees them, and then tries to print the value of one of the elements of the array. Does the program run? What happens when you use valgrind on it?
-
+6. Create a program that allocates an array of integers (as above),
+frees them, and then tries to print the value of one of the elements of the array. 
+Does the program run? What happens when you use valgrind on it?
+	The program compiles/ runs without problems, but when we use valgrind, we can see that there is an
+	error: "Invalid write size 4... Address 0x4a75040 is 0 bytes inside a block of size 10 free'd".
+	So when we free all the memory allocated to pointer, it has 0 bytes allocated and won't	
+	automatically allocate space for a new data type.
 
 7. Now pass a funny value to free (e.g., a pointer in the middle of the array you allocated above). What happens? Do you need tools to find this type of problem?
-
+	segfault (core dumped).
+	We get 10 still reachable bytes, meaning that when we attempted to free a, we did not successfully free
+	data. The textbook says that free() expects us to only pass it pointers we've received from malloc().
+	a wasn't freed either, since it wasn't malloc'd data (heap data).
+	I confirmed that free(data) worked correctly by commenting out the lines with *a and running valgrind.
+	It would be hard to find this without valgrind, as segfault does not necessarily show us that data was 
+	freed when we freed a. 
 
 
