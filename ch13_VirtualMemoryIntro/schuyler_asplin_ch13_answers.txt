@@ -13,11 +13,11 @@ be useful (e.g., -m, to display memory totals in megabytes). How
 much memory is in your system? How much is free? Do these
 numbers match your intuition?
 
-On my linux computer (numbers in millions):
-7.58M mb total (7580 gb)
-5.68M mb free (5680 gb)
-2.57M mb used
-NO WAY this computer has that much memory. I'm being lied to. 
+On my linux computer :
+7403 mb total (7 gb)
+189 mb free (.2 gb)
+3783 mb used (3.7 gb)
+I know - this thing is a piece of a real clunker :)
 
 
 3. Next, create a little program that uses a certain amount of memory,
@@ -26,20 +26,44 @@ When run, it should allocate an array, and constantly stream through
 the array, touching each entry. The program should do this indefinitely, or, perhaps, for a certain amount of time also specified at the
 command line.
 
-	memory-user.c works with one or two command line arguments. The first is how many times each letter of the alphabet will be printed per line (how many bytes are malloc'd), and the second is how many letters (rows) will be printed. Each malloc'd byte is touched on each iteration of the loop. If no second argument is provided, it runs until the user kills the program.
+	memory-user.c works with one or two command line arguments. 
+The first is how many times each letter of the alphabet will be printed per line (how many bytes are malloc'd), 
+and the second is how many letters (rows) will be printed. 
+Each malloc'd byte is touched on each iteration of the loop. 
+If no second argument is provided, it runs until the user kills the program.
 	
 
-4. Now, while running your memory-user program, also (in a different terminal window, but on the same machine) run the free
+4. Now, while running your memory-user program, also 
+(in a different terminal window, but on the same machine) run the free
 tool. How do the memory usage totals change when your program
 is running? How about when you kill the memory-user program?
 Do the numbers match your expectations? Try this for different
 amounts of memory usage. What happens when you use really
 large amounts of memory?
 
+BEFORE:
+	               total        used        free      shared  buff/cache   available
+Mem:            7403        3762         232          70        3407        3284
+Swap:           7402          24        7378
+
+DURING RUN:
+               total        used        free      shared  buff/cache   available
+Mem:            7403        3782         212          70        3408        3265
+Swap:           7402          24        7378
+
+1 MINUTE AFTER:
+               total        used        free      shared  buff/cache   available
+Mem:            7403        3748         232          74        3422        3295
+Swap:           7402          24        7378
+
+So there is a small amount of memory that has moved from free to used during the programm and then back again.
+I had to wait a bit after the run to see the numbers change - even 10 seconds after the free number was still depressed.
 
 
 5. Let’s try one more tool, known as pmap. Spend some time, and read
 the pmap manual page in detail.
+
+
 
 6. To use pmap, you have to know the process ID of the process you’re
 interested in. Thus, first run ps auxw to see a list of all processes;
@@ -48,10 +72,30 @@ your memory-user program in this case (indeed, you can even
 have that program call getpid() and print out its PID for your
 convenience).
 
+	PID of firefox is 33207 (there are a ton of them but I think this is the )	
+
 7. Now run pmap on some of these processes, using various flags (like
 -X) to reveal many details about the process. What do you see?
 How many different entities make up a modern address space, as
 opposed to our simple conception of code/stack/heap?
+
+	so many addresses! stack has 128 kb. some of anon is probably heap?
+	- firefox loads libpcsclite 
+	(sent me down a rabbit hole about smart cards.. pretty confused, but seems like it's an identification device embedded onto a chip), 
+	libcrypto (encryption),
+	libtasn1 (package - impossible to tell what this does.. DER/BER data following an ASN..?)
+	p11-kit-trust.so - interfaces with cryptographic token modules
+	libp11-kit1.so - seems like it does the the same thing. load and enumerate PKCS11 modules
+	libfreeblpriv3 - something with apache
+	memfd:mozilla-ipc (deleted)
+	way to many other libs for me to go through all of them. 
+	Some that I recognized on a cursory level include libsqlite, libfontconfig, libmozsqlite3, libc and libgcc,
+	libstdc++, ld-linux-x86-64.so.
+
+	-x shows resident set size and how many pages are dirty for in each memory address segment.
+	-d adds device and offset
+	-p is actually really cool. most things are from the lib64/firefox directory OR from their own directory in lib64.
+	
 
 8. Finally, let’s run pmap on your memory-user program, with different amounts of used memory. What do you see here? Does the
 output from pmap match your expectations?

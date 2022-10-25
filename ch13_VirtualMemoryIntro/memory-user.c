@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+ 
 
-;
 
 int main(int argc, char *argv[]) {
 
@@ -36,10 +36,8 @@ int main(int argc, char *argv[]) {
         int i = 0;  
         while (i < loops) {
             for (int j = 0; j < number_of_bytes; j++) {
-            bytes[i] = ((i+65)%122); // A = 65, z = 122
-            printf("%c  ",bytes[i]);
+                bytes[i] = ((i+65)%122); // A = 65, z = 122
                 printf("%c  ",bytes[i]);
-            
             }
             printf("\n");
             i++;
