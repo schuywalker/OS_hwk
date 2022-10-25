@@ -26,9 +26,8 @@ When run, it should allocate an array, and constantly stream through
 the array, touching each entry. The program should do this indefinitely, or, perhaps, for a certain amount of time also specified at the
 command line.
 
-
-
-
+	memory-user.c works with one or two command line arguments. The first is how many times each letter of the alphabet will be printed per line (how many bytes are malloc'd), and the second is how many letters (rows) will be printed. Each malloc'd byte is touched on each iteration of the loop. If no second argument is provided, it runs until the user kills the program.
+	
 
 4. Now, while running your memory-user program, also (in a different terminal window, but on the same machine) run the free
 tool. How do the memory usage totals change when your program
@@ -36,6 +35,8 @@ is running? How about when you kill the memory-user program?
 Do the numbers match your expectations? Try this for different
 amounts of memory usage. What happens when you use really
 large amounts of memory?
+
+
 
 5. Let’s try one more tool, known as pmap. Spend some time, and read
 the pmap manual page in detail.
