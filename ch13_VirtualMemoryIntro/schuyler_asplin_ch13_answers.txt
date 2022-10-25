@@ -6,18 +6,18 @@ Chapter 12 Virtual Memory Intro
 free. First, type man free and read its entire manual page; it’s
 short, don’t worry!
 
-read it! the ones I'm not familiar with:
-calloc lets you specify the count of the objects (I'm guessing this is in place of the normal '* 10' we would do to the type we are mallocing??). 
-callocd mem initialized to 0.
-valloc is malloc but with its 'aligned on a page boundary' - ???
-aligned alloc - aligns allocd mem - ???
-reallocf - like realloc but it frees the memory first.
+free isn't a command on mac - that information is available in activity monitor but not from command line. Switching to linux...
 
 2. Now, run free, perhaps using some of the arguments that might
 be useful (e.g., -m, to display memory totals in megabytes). How
 much memory is in your system? How much is free? Do these
 numbers match your intuition?
 
+On my linux computer (numbers in millions):
+7.58M mb total (7580 gb)
+5.68M mb free (5680 gb)
+2.57M mb used
+NO WAY this computer has that much memory. I'm being lied to. 
 
 
 3. Next, create a little program that uses a certain amount of memory,
@@ -25,6 +25,10 @@ called memory-user.c. This program should take one commandline argument: the num
 When run, it should allocate an array, and constantly stream through
 the array, touching each entry. The program should do this indefinitely, or, perhaps, for a certain amount of time also specified at the
 command line.
+
+
+
+
 
 4. Now, while running your memory-user program, also (in a different terminal window, but on the same machine) run the free
 tool. How do the memory usage totals change when your program
