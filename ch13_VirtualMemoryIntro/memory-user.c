@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     fprintf("%d   %d\n",number_of_bytes,loops);
     
-    char *bytes = malloc(sizeof(char*) * (number_of_bytes));
+    char *bytes = malloc(sizeof(char) * (number_of_bytes));
 
     int i = 0;
     // int j = 0;
