@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
 
     int infinite = 0; // false
-
+ 
     if (argc < 2) {
         printf("please rerun with:\nfirst argument as bytes to be allocated and\nthe second arg is optional, and functions as the number of times to loop through the allocated memory.\n");
         exit(-1);
@@ -24,8 +24,9 @@ int main(int argc, char *argv[]) {
         int i = 0;
         while (1) {
         for (int j = 0; j < number_of_bytes; j++) {
-            bytes[i] = ((i+65)%122); // A = 65, z = 122
-            printf("%c  ",bytes[i]);
+            // bytes[j] = ((i+65)%122); // A = 65, z = 122
+            // printf("%c  ",bytes[i]);
+            bytes[j] = 'a';
         }
         i++;
         printf("\n");

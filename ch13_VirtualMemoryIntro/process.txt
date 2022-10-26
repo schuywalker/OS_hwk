@@ -1,0 +1,321 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2 106752 15760 ?        Ss   Oct24   0:03 /usr/lib/systemd/systemd rhgb --switched-root --system --deserialize 31
+root           2  0.0  0.0      0     0 ?        S    Oct24   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Oct24   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Oct24   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   Oct24   0:00 [netns]
+root          10  0.0  0.0      0     0 ?        I<   Oct24   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    Oct24   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    Oct24   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    Oct24   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    Oct24   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    Oct24   0:19 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    Oct24   0:00 [migration/0]
+root          17  0.0  0.0      0     0 ?        S    Oct24   0:00 [cpuhp/0]
+root          18  0.0  0.0      0     0 ?        S    Oct24   0:00 [cpuhp/1]
+root          19  0.0  0.0      0     0 ?        S    Oct24   0:00 [migration/1]
+root          20  0.0  0.0      0     0 ?        S    Oct24   0:00 [ksoftirqd/1]
+root          22  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kworker/1:0H-events_highpri]
+root          23  0.0  0.0      0     0 ?        S    Oct24   0:00 [kdevtmpfs]
+root          24  0.0  0.0      0     0 ?        I<   Oct24   0:00 [inet_frag_wq]
+root          25  0.0  0.0      0     0 ?        S    Oct24   0:00 [kauditd]
+root          27  0.0  0.0      0     0 ?        S    Oct24   0:00 [oom_reaper]
+root          28  0.0  0.0      0     0 ?        I<   Oct24   0:00 [writeback]
+root          29  0.0  0.0      0     0 ?        S    Oct24   0:16 [kcompactd0]
+root          30  0.0  0.0      0     0 ?        SN   Oct24   0:00 [ksmd]
+root          31  0.0  0.0      0     0 ?        SN   Oct24   0:00 [khugepaged]
+root          32  0.0  0.0      0     0 ?        I<   Oct24   0:00 [cryptd]
+root          33  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kintegrityd]
+root          34  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kblockd]
+root          35  0.0  0.0      0     0 ?        I<   Oct24   0:00 [blkcg_punt_bio]
+root          36  0.0  0.0      0     0 ?        I<   Oct24   0:00 [tpm_dev_wq]
+root          37  0.0  0.0      0     0 ?        I<   Oct24   0:00 [ata_sff]
+root          38  0.0  0.0      0     0 ?        I<   Oct24   0:00 [md]
+root          39  0.0  0.0      0     0 ?        I<   Oct24   0:00 [edac-poller]
+root          40  0.0  0.0      0     0 ?        S    Oct24   0:00 [watchdogd]
+root          42  0.0  0.0      0     0 ?        I<   Oct24   0:03 [kworker/1:1H-kblockd]
+root          44  0.0  0.0      0     0 ?        S    Oct24   0:11 [kswapd0]
+root          51  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kthrotld]
+root          56  0.0  0.0      0     0 ?        S    Oct24   0:00 [irq/25-pciehp]
+root          57  0.0  0.0      0     0 ?        I<   Oct24   0:00 [acpi_thermal_pm]
+root          58  0.0  0.0      0     0 ?        S    Oct24   0:00 [scsi_eh_0]
+root          59  0.0  0.0      0     0 ?        I<   Oct24   0:00 [scsi_tmf_0]
+root          60  0.0  0.0      0     0 ?        S    Oct24   0:00 [scsi_eh_1]
+root          61  0.0  0.0      0     0 ?        I<   Oct24   0:00 [scsi_tmf_1]
+root          63  0.0  0.0      0     0 ?        I<   Oct24   0:00 [dm_bufio_cache]
+root          64  0.0  0.0      0     0 ?        I<   Oct24   0:00 [mld]
+root          65  0.0  0.0      0     0 ?        I<   Oct24   0:00 [ipv6_addrconf]
+root          70  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kstrp]
+root          83  0.0  0.0      0     0 ?        I<   Oct24   0:00 [zswap-shrink]
+root         239  0.0  0.0      0     0 ?        I<   Oct24   0:00 [ipmi-msghandler]
+root         373  0.0  0.0      0     0 ?        S    Oct24   0:36 [irq/31-ELAN0708:00]
+root         396  0.0  0.0      0     0 ?        S    Oct24   0:19 [gfx]
+root         397  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.0]
+root         398  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.1]
+root         399  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.2]
+root         400  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.3]
+root         401  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.4]
+root         402  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.5]
+root         403  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.6]
+root         404  0.0  0.0      0     0 ?        S    Oct24   0:00 [comp_1.0.7]
+root         405  0.0  0.0      0     0 ?        S    Oct24   0:00 [sdma0]
+root         406  0.0  0.0      0     0 ?        S    Oct24   0:00 [uvd]
+root         407  0.0  0.0      0     0 ?        S    Oct24   0:00 [vce0]
+root         408  0.0  0.0      0     0 ?        S    Oct24   0:00 [vce1]
+root         409  0.0  0.0      0     0 ?        I<   Oct24   0:00 [amdgpu_dm_hpd_r]
+root         410  0.0  0.0      0     0 ?        I<   Oct24   0:00 [amdgpu_dm_hpd_r]
+root         411  0.0  0.0      0     0 ?        I<   Oct24   0:00 [amdgpu_dm_hpd_r]
+root         412  0.0  0.0      0     0 ?        I<   Oct24   0:00 [dm_vblank_contr]
+root         413  0.0  0.0      0     0 ?        S    Oct24   0:00 [card0-crtc0]
+root         414  0.0  0.0      0     0 ?        S    Oct24   0:00 [card0-crtc1]
+root         421  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-worker]
+root         422  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-worker-hi]
+root         423  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-delalloc]
+root         424  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-flush_del]
+root         425  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-cache]
+root         426  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-fixup]
+root         427  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-endio]
+root         428  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-endio-met]
+root         429  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-endio-met]
+root         430  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-endio-rai]
+root         431  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-rmw]
+root         432  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-endio-wri]
+root         433  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-freespace]
+root         434  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-delayed-m]
+root         435  0.0  0.0      0     0 ?        I<   Oct24   0:00 [btrfs-qgroup-re]
+root         436  0.0  0.0      0     0 ?        S    Oct24   0:00 [btrfs-cleaner]
+root         437  0.0  0.0      0     0 ?        S    Oct24   0:25 [btrfs-transaction]
+root         544  0.0  0.2  67116 22124 ?        Ss   Oct24   0:03 /usr/lib/systemd/systemd-journald
+root         557  0.0  0.1  35612 11300 ?        Ss   Oct24   0:02 /usr/lib/systemd/systemd-udevd
+root         617  0.0  0.0      0     0 ?        I<   Oct24   0:00 [cfg80211]
+root         638  0.2  0.0      0     0 ?        S    Oct24   1:33 [irq/40-rtw88_pci]
+root         658  0.0  0.0      0     0 ?        S    Oct24   0:00 [jbd2/sda3-8]
+root         659  0.0  0.0      0     0 ?        I<   Oct24   0:00 [ext4-rsv-conver]
+systemd+     682  0.1  0.0  17132  6348 ?        Ss   Oct24   0:44 /usr/lib/systemd/systemd-oomd
+systemd+     683  0.0  0.2  34428 20744 ?        Ss   Oct24   0:06 /usr/lib/systemd/systemd-resolved
+root         684  0.0  0.0  16972  6936 ?        Ss   Oct24   0:00 /usr/lib/systemd/systemd-userdbd
+root         685  0.0  0.0  90500  2224 ?        S<sl Oct24   0:00 /sbin/auditd
+root         691  0.0  0.0   7548  3120 ?        S<   Oct24   0:00 /usr/sbin/sedispatch
+root         696  0.0  0.0      0     0 ?        I<   Oct24   0:00 [rpciod]
+root         697  0.0  0.0      0     0 ?        I<   Oct24   0:00 [xprtiod]
+avahi        711  0.0  0.0   8788  4784 ?        Ss   Oct24   0:09 avahi-daemon: running [fedorchebag.local]
+root         712  0.0  0.0   9756  5364 ?        Ss   Oct24   0:00 /usr/libexec/bluetooth/bluetoothd
+root         713  0.0  0.0  79188  3064 ?        Ssl  Oct24   0:01 /usr/sbin/irqbalance --foreground
+root         715  0.0  0.0 229568  4712 ?        SLsl Oct24   0:00 /usr/libexec/low-memory-monitor
+polkitd      716  0.0  0.3 2572776 23272 ?       Ssl  Oct24   0:03 /usr/lib/polkit-1/polkitd --no-debug
+root         717  0.0  0.0 451764  6632 ?        Ssl  Oct24   0:00 /usr/libexec/power-profiles-daemon
+root         718  0.0  0.2 885628 20700 ?        Ssl  Oct24   0:04 /usr/sbin/rsyslogd -n
+rtkit        719  0.0  0.0 153904  1572 ?        SNsl Oct24   0:00 /usr/libexec/rtkit-daemon
+root         720  0.0  0.0  11584  5856 ?        Ss   Oct24   0:00 /usr/sbin/smartd -n -q never --capabilities=mail
+root         723  0.0  0.0 525392  7208 ?        Ssl  Oct24   0:00 /usr/libexec/accounts-daemon
+root         724  0.0  0.0 448128  6380 ?        Ssl  Oct24   0:00 /usr/libexec/switcheroo-control
+root         725  0.0  0.1  17460  8736 ?        Ss   Oct24   0:00 /usr/lib/systemd/systemd-homed
+root         726  0.0  0.1  53128 12224 ?        Ss   Oct24   0:00 /usr/lib/systemd/systemd-logind
+root         727  0.0  0.1  17308  8760 ?        Ss   Oct24   0:00 /usr/lib/systemd/systemd-machined
+root         729  0.0  0.1 393740 12936 ?        Ssl  Oct24   0:06 /usr/libexec/udisks2/udisksd
+root         730  0.0  0.1 453688  8568 ?        Ssl  Oct24   0:01 /usr/libexec/upowerd
+dbus         731  0.0  0.0  10832  5024 ?        Ss   Oct24   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+avahi        738  0.0  0.0   8512   360 ?        S    Oct24   0:00 avahi-daemon: chroot helper
+chrony       772  0.0  0.0  84748  3700 ?        S    Oct24   0:00 /usr/sbin/chronyd -F 2
+root         773  0.0  0.2 471460 15952 ?        Ssl  Oct24   0:00 /usr/sbin/abrtd -d -s
+dbus         783  0.0  0.1  11800  7724 ?        S    Oct24   0:05 dbus-broker --log 4 --controller 9 --machine-id 1d0f81c3bc5a4eae9f47fe027c3d2093 --max-bytes 536870912 --max-fds 4096 --max-matches 131072 --audit
+root         785  0.0  0.0      0     0 ?        S    Oct24   0:00 [psimon]
+root         797  0.0  0.2 971564 18660 ?        Ss   Oct24   0:00 /usr/bin/abrt-dump-journal-core -D -T -f -e
+root         798  0.0  0.2 962972 21636 ?        Ss   Oct24   0:00 /usr/bin/abrt-dump-journal-oops -fxtD
+root         799  0.0  0.2 946500 22064 ?        Ss   Oct24   0:00 /usr/bin/abrt-dump-journal-xorg -fxtD
+root         801  0.0  0.0   4680  1532 ?        SNs  Oct24   0:00 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon
+root         803  0.0  0.1 390368  9472 ?        Ssl  Oct24   0:00 /usr/sbin/ModemManager
+root         804  0.0  0.5 351844 38480 ?        Ssl  Oct24   0:01 /usr/bin/python3 -s /usr/sbin/firewalld --nofork --nopid
+root         827  0.0  0.2 474240 20692 ?        Ssl  Oct24   0:27 /usr/sbin/NetworkManager --no-daemon
+root         832  0.0  0.1 245996 10424 ?        Ss   Oct24   0:00 /usr/sbin/cupsd -l
+mssql        835  0.0  0.2 275836 15912 ?        Ssl  Oct24   0:01 /opt/mssql/bin/sqlservr
+root         836  0.0  0.0 268936  3136 ?        Ssl  Oct24   0:00 /usr/sbin/gssproxy -D
+root         865  0.0  0.1  14216  9124 ?        Ss   Oct24   0:01 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -u -s
+root         952  0.0  0.0   3412  1056 ?        Ss   Oct24   0:00 /usr/sbin/atd -f
+root         955  0.0  0.0 223880  3608 ?        Ss   Oct24   0:00 /usr/sbin/crond -n
+root         958  0.0  0.1 452708  8272 ?        Ssl  Oct24   0:00 /usr/sbin/gdm
+root        1001  0.0  0.0 232888  5248 ?        Ssl  Oct24   0:00 /usr/libexec/uresourced
+root        1117  0.1  5.0 936536 383508 ?       Ssl  Oct24   0:56 /usr/libexec/packagekitd
+root        1296  0.0  0.1 1241168 7884 ?        Ssl  Oct24   0:00 /usr/sbin/pcscd --foreground --auto-exit
+root        1327  0.0  0.0      0     0 ?        S<   Oct24   0:00 [krfcommd]
+colord      1371  0.0  0.1 530224 11256 ?        Ssl  Oct24   0:00 /usr/libexec/colord
+mssql       1463  1.2 10.8 9952052 825692 ?      Sl   Oct24   7:32 /opt/mssql/bin/sqlservr
+root        1586  0.0  0.0      0     0 ?        I<   Oct24   0:00 [dio/sda4]
+root        1659  0.0  0.1 534228 12580 ?        Sl   Oct24   0:00 gdm-session-worker [pam/gdm-password]
+trevor      1680  0.4  0.2  23404 15212 ?        Ss   Oct24   2:28 /usr/lib/systemd/systemd --user
+trevor      1685  0.0  0.0 110228  3760 ?        S    Oct24   0:00 (sd-pam)
+trevor      1709  0.0  0.0 452484  5580 ?        Sl   Oct24   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+trevor      1719  0.0  0.0 374132  5356 tty2     Ssl+ Oct24   0:00 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session
+trevor      1723  0.0  0.0  10432  4372 ?        Ss   Oct24   0:00 /usr/bin/dbus-broker-launch --scope user
+trevor      1726  0.0  0.0   7016  4880 ?        S    Oct24   0:08 dbus-broker --log 4 --controller 10 --machine-id 1d0f81c3bc5a4eae9f47fe027c3d2093 --max-bytes 100000000000000 --max-fds 25000000000000 --max-matches 5000000000
+trevor      1728  0.0  0.1 513748 14544 tty2     Sl+  Oct24   0:00 /usr/libexec/gnome-session-binary
+trevor      1991  0.0  0.0 303580  4604 ?        Ssl  Oct24   0:00 /usr/libexec/gnome-session-ctl --monitor
+trevor      1992  0.0  0.0 159156  4912 ?        Ssl  Oct24   0:00 /usr/libexec/uresourced --user
+trevor      1996  0.0  0.2 940404 16208 ?        Ssl  Oct24   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=gnome
+trevor      2019  1.1  2.7 4013104 207084 ?      Ssl  Oct24   6:50 /usr/bin/gnome-shell
+trevor      2061  0.0  0.0 452160  7456 ?        Ssl  Oct24   0:00 /usr/libexec/gvfsd
+trevor      2076  0.0  0.0 379908  6276 ?        Sl   Oct24   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+trevor      2084  0.0  0.0 308396  6768 ?        Ssl  Oct24   0:00 /usr/libexec/at-spi-bus-launcher
+trevor      2089  0.0  0.0  10304  4140 ?        S    Oct24   0:00 /usr/bin/dbus-broker-launch --config-file=/usr/share/defaults/at-spi2/accessibility.conf --scope user
+trevor      2090  0.0  0.0   4952  2880 ?        S    Oct24   0:00 dbus-broker --log 4 --controller 9 --machine-id 1d0f81c3bc5a4eae9f47fe027c3d2093 --max-bytes 100000000000000 --max-fds 6400000 --max-matches 5000000000
+trevor      2102  0.0  0.0 447896  4660 ?        Ssl  Oct24   0:00 /usr/libexec/xdg-permission-store
+trevor      2106  0.0  0.2 584480 16652 ?        Ssl  Oct24   0:00 /usr/libexec/gnome-shell-calendar-server
+trevor      2117  0.2  0.1 327808 14616 ?        Ssl  Oct24   1:42 /usr/bin/pipewire
+trevor      2118  0.0  0.2 545688 15904 ?        Ssl  Oct24   0:01 /usr/bin/wireplumber
+trevor      2119  0.5  0.3 263600 24420 ?        SLsl Oct24   3:25 /usr/bin/pipewire-pulse
+geoclue     2140  0.0  0.3 1166648 24080 ?       Ssl  Oct24   0:02 /usr/libexec/geoclue
+trevor      2145  0.0  0.0 156112  5820 ?        Ssl  Oct24   0:00 /usr/libexec/dconf-service
+trevor      2159  0.0  0.1 533124  9628 ?        Ssl  Oct24   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+trevor      2172  0.0  0.2 1285524 20276 ?       Ssl  Oct24   0:00 /usr/libexec/evolution-source-registry
+trevor      2177  0.0  0.3 899192 25908 ?        Ssl  Oct24   0:00 /usr/libexec/goa-daemon
+trevor      2182  0.0  0.0 448208  5844 ?        Ssl  Oct24   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+trevor      2186  0.0  0.0 450184  6788 ?        Ssl  Oct24   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+trevor      2190  0.0  0.0 448276  5636 ?        Ssl  Oct24   0:00 /usr/libexec/gvfs-goa-volume-monitor
+trevor      2195  0.0  0.2 1397448 22616 ?       Ssl  Oct24   0:00 /usr/libexec/evolution-calendar-factory
+trevor      2206  0.0  0.2 898884 20368 ?        Ssl  Oct24   0:00 /usr/libexec/evolution-addressbook-factory
+trevor      2224  0.0  0.1 455976  7992 ?        Ssl  Oct24   0:02 /usr/libexec/goa-identity-service
+trevor      2226  0.0  0.0 526444  7472 ?        Ssl  Oct24   0:00 /usr/libexec/gvfs-afc-volume-monitor
+trevor      2238  0.0  0.3 2796416 23328 ?       Ssl  Oct24   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+trevor      2239  0.0  0.0 161500  6984 ?        Ssl  Oct24   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+trevor      2255  0.0  0.0 522176  5960 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-a11y-settings
+trevor      2257  0.0  0.3 892168 26000 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-color
+trevor      2260  0.0  0.2 667568 15380 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-datetime
+trevor      2261  0.0  0.0 524744  7036 ?        Ssl  Oct24   0:01 /usr/libexec/gsd-housekeeping
+trevor      2263  0.0  0.3 665880 24396 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-keyboard
+trevor      2264  0.0  0.3 950004 27416 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-media-keys
+trevor      2272  0.0  0.3 735364 26884 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-power
+trevor      2279  0.0  0.1 465508 12664 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-print-notifications
+trevor      2282  0.0  0.0 669608  6024 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-rfkill
+trevor      2284  0.0  0.0 448028  5808 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-screensaver-proxy
+trevor      2287  0.0  0.1 678016 10240 ?        Ssl  Oct24   0:16 /usr/libexec/gsd-sharing
+trevor      2290  0.0  0.1 608664 12800 ?        Ssl  Oct24   0:02 /usr/libexec/gsd-smartcard
+trevor      2292  0.0  0.1 530608  8368 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-sound
+trevor      2293  0.0  0.0 671532  6720 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-usb-protection
+trevor      2294  0.0  0.3 666456 25216 ?        Ssl  Oct24   0:00 /usr/libexec/gsd-wacom
+trevor      2354  0.0  0.9 1195776 69056 ?       Sl   Oct24   0:08 /usr/bin/gnome-software --gapplication-service
+trevor      2364  0.0  0.0 232160  6420 ?        Sl   Oct24   0:00 /usr/libexec/gsd-disk-utility-notify
+trevor      2386  0.0  0.3 602748 28460 ?        Sl   Oct24   0:00 clipit
+trevor      2391  0.0  0.6 996372 47020 ?        Sl   Oct24   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+trevor      2392  0.0  0.2 526512 20432 ?        Ssl  Oct24   0:00 /usr/bin/abrt-applet --gapplication-service
+trevor      2395  0.0  0.9 804256 71168 ?        Sl   Oct24   0:07 /usr/bin/python3 /usr/bin/dnfdragora-updater
+trevor      2398  0.0  0.4 610056 34528 ?        Sl   Oct24   0:00 /usr/bin/python3 /usr/bin/seapplet
+trevor      2441  0.0  0.2 597524 17116 ?        Sl   Oct24   0:00 /usr/libexec/gsd-printer
+trevor      2474  0.0  0.3 2796420 24304 ?       Ssl  Oct24   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+trevor      2479  0.0  0.0 160292  7172 ?        Ssl  Oct24   0:00 /usr/libexec/imsettings-daemon
+trevor      2518  0.3  1.0 565276 79340 ?        Sl   Oct24   2:02 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.L5EIU1 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7
+root        2597  0.0  0.2 471968 15612 ?        Ssl  Oct24   0:00 /usr/sbin/abrt-dbus -t133
+trevor      2635  0.0  0.1 601024 11544 ?        Sl   Oct24   0:01 ibus-daemon --panel disable -r --xim
+trevor      2636  0.0  0.6 1097316 49572 ?       Ssl  Oct24   0:00 /usr/libexec/gsd-xsettings
+trevor      2642  0.0  0.0 449076  6408 ?        Sl   Oct24   0:00 /usr/libexec/ibus-dconf
+trevor      2643  0.0  0.3 596848 27532 ?        Sl   Oct24   0:04 /usr/libexec/ibus-extension-gtk3
+trevor      2648  0.0  0.6 949568 49080 ?        Sl   Oct24   0:00 /usr/libexec/ibus-x11 --kill-daemon
+trevor      2651  0.0  0.0 449016  6640 ?        Ssl  Oct24   0:00 /usr/libexec/ibus-portal
+trevor      2692  0.0  0.0 375232  6480 ?        Sl   Oct24   0:00 /usr/libexec/ibus-engine-simple
+trevor      2924  0.0  0.5 914968 42008 ?        Ssl  Oct24   0:00 /usr/bin/gnome-calendar --gapplication-service
+trevor      2960  0.0  0.1 526360  7936 ?        Sl   Oct24   0:00 /usr/libexec/gvfsd-trash --spawner :1.17 /org/gtk/gvfs/exec_spaw/0
+trevor      2986  0.0  0.0  45836  6028 ?        Ss   Oct24   0:00 /usr/libexec/bluetooth/obexd
+trevor      3013  0.0  0.5 956988 43028 ?        SNsl Oct24   0:13 /usr/libexec/tracker-miner-fs-3
+trevor      3025  0.0  0.0 374760  5968 ?        Ssl  Oct24   0:00 /usr/libexec/gvfsd-metadata
+root        3082  0.0  0.0 225732   528 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/updates-modular-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3084  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/updates-modular-36-x86_64.tmp/gpgdir
+root        3095  0.0  0.0 225732   448 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/updates-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3097  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/updates-36-x86_64.tmp/gpgdir
+trevor      3116  0.0  0.5 763804 39264 ?        Ssl  Oct24   0:01 /usr/libexec/gnome-terminal-server
+trevor      3134  0.0  0.0 227896  4688 pts/0    Ss+  Oct24   0:00 bash
+root        3329  0.0  0.0 225732   664 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/code-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3331  0.0  0.0  78588  1108 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/code-36-x86_64.tmp/gpgdir
+root        3380  0.0  0.0 225732   672 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/gh-cli-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3382  0.0  0.0  78588  1096 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/gh-cli-36-x86_64.tmp/gpgdir
+root        3394  0.0  0.0 225732   636 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/mono-centos8-stable-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3396  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/mono-centos8-stable-36-x86_64.tmp/gpgdir
+root        3407  0.0  0.0 225732   640 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/rpmfusion-nonfree-updates-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3409  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/rpmfusion-nonfree-updates-36-x86_64.tmp/gpgdir
+root        3423  0.0  0.0 225732   592 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/rpmfusion-free-updates-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3425  0.0  0.0  78588  1100 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/rpmfusion-free-updates-36-x86_64.tmp/gpgdir
+root        3447  0.0  0.0 225732   644 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/teams-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3449  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/teams-36-x86_64.tmp/gpgdir
+root        3461  0.0  0.0 225732   648 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/packages-microsoft-com-mssql-server-2019-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3463  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/packages-microsoft-com-mssql-server-2019-36-x86_64.tmp/gpgdir
+root        3477  0.0  0.0 225732   660 ?        Ssl  Oct24   0:00 gpg-agent --homedir /var/cache/PackageKit/36/metadata/packages-microsoft-com-prod-36-x86_64.tmp/gpgdir --use-standard-socket --daemon
+root        3479  0.0  0.0  78588  1104 ?        SLl  Oct24   0:00 scdaemon --multi-server --homedir /var/cache/PackageKit/36/metadata/packages-microsoft-com-prod-36-x86_64.tmp/gpgdir
+trevor      3552  0.5  1.4 21697400 112056 ?     SLsl Oct24   3:06 /usr/share/code/code --enable-crashpad .
+trevor      3559  0.0  0.2 17228300 16732 ?      S    Oct24   0:00 /usr/share/code/code --type=zygote --no-zygote-sandbox --enable-crashpad --enable-crashpad
+trevor      3560  0.0  0.2 17228300 15204 ?      S    Oct24   0:00 /usr/share/code/code --type=zygote --enable-crashpad --enable-crashpad
+trevor      3562  0.0  0.0 17228300 672 ?        S    Oct24   0:00 /usr/share/code/code --type=zygote --enable-crashpad --enable-crashpad
+trevor      3576  0.0  0.0 16798288 2356 ?       Sl   Oct24   0:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/trevor/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=ccea86a4-491f-45da-8e19-f00912bafd29&iid=ccea86a4-491f-45da-8e19-f00912bafd29&sid=ccea86a4-491f-45da-8e19-f00912bafd29 --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.66.2 --annotation=prod=Electron --annotation=ver=17.2.0 --initial-client-fd=43 --shared-client-connection
+trevor      3593  0.0  0.1 762456 11676 ?        Ssl  Oct24   0:00 /usr/libexec/xdg-desktop-portal
+trevor      3594  1.4  1.2 17500280 96124 ?      Sl   Oct24   8:54 /usr/share/code/code --type=gpu-process --disable-color-correct-rendering --enable-crashpad --crashpad-handler-pid=3576 --enable-crash-reporter=c49b2e0f-4d9c-4069-9b9e-26df6b1c731f,no_channel --user-data-dir=/home/trevor/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABgAAAAAAAAAGAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=0,16651318943295449080,2408316908116561513,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess
+trevor      3603  0.0  0.0 669852  6076 ?        Ssl  Oct24   0:00 /usr/libexec/xdg-document-portal
+root        3607  0.0  0.0   2644  1008 ?        Ss   Oct24   0:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+trevor      3612  0.0  0.3 757132 25788 ?        Ssl  Oct24   0:00 /usr/libexec/xdg-desktop-portal-gnome
+trevor      3622  0.0  0.3 592180 23840 ?        Ssl  Oct24   0:00 /usr/libexec/xdg-desktop-portal-gtk
+trevor      3643  0.0  0.4 17278032 36884 ?      Sl   Oct24   0:04 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --enable-crashpad --crashpad-handler-pid=3576 --enable-crash-reporter=c49b2e0f-4d9c-4069-9b9e-26df6b1c731f,no_channel --user-data-dir=/home/trevor/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,16651318943295449080,2408316908116561513,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess --enable-crashpad
+trevor      3666  3.9  3.2 40463180 245556 ?     Rl   Oct24  24:19 /usr/share/code/code --type=renderer --enable-crashpad --crashpad-handler-pid=3576 --enable-crash-reporter=c49b2e0f-4d9c-4069-9b9e-26df6b1c731f,no_channel --user-data-dir=/home/trevor/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --no-sandbox --no-zygote --enable-blink-features=HighlightAPI --disable-color-correct-rendering --lang=en-US --num-raster-threads=1 --renderer-client-id=4 --launch-time-ticks=320268007 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,16651318943295449080,2408316908116561513,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess --vscode-window-config=vscode:d150c576-23f6-4a9e-b2c3-53b84f10aaaf --enable-crashpad
+trevor      3684  0.0  1.2 29952140 95724 ?      Sl   Oct24   0:29 /usr/share/code/code --type=renderer --enable-crashpad --crashpad-handler-pid=3576 --enable-crash-reporter=c49b2e0f-4d9c-4069-9b9e-26df6b1c731f,no_channel --user-data-dir=/home/trevor/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --no-sandbox --no-zygote --node-integration-in-worker --disable-color-correct-rendering --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --launch-time-ticks=324178267 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,16651318943295449080,2408316908116561513,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess --vscode-window-config=vscode:cde18c56-1114-44ce-97e9-df6b1c122e88 --vscode-window-kind=shared-process --enable-crashpad
+trevor      3698  0.1  1.5 21298524 115640 ?     Sl   Oct24   1:04 /usr/share/code/code --ms-enable-electron-run-as-node --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost --skipWorkspaceStorageLock
+trevor      3716  0.1  0.8 21313976 63892 ?      Sl   Oct24   0:58 /usr/share/code/code --ms-enable-electron-run-as-node /usr/share/code/resources/app/out/bootstrap-fork --type=ptyHost
+trevor      3745  0.0  0.6 21297988 46556 ?      Sl   Oct24   0:03 /usr/share/code/code --ms-enable-electron-run-as-node /usr/share/code/resources/app/out/bootstrap-fork --type=fileWatcher
+trevor      4361  0.1  0.9 1177256 73476 ?       Sl   Oct24   1:08 /home/trevor/.vscode/extensions/ms-vscode.cpptools-1.11.5-linux-x64/bin/cpptools
+trevor      5040  0.0  0.1 227916  9244 pts/1    Ss+  Oct24   0:00 /usr/bin/bash
+trevor      5285  0.0  0.0 244176  3132 ?        Sl   Oct24   0:02 /home/trevor/.vscode/extensions/ms-vscode.cpptools-1.11.5-linux-x64/bin/cpptools-srv 4361 {BE777C76-7985-4CA0-89C6-1468729717E6}
+root       30476  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kworker/0:1H-acpi_thermal_pm]
+trevor     32207  0.9  5.0 3545136 382676 ?      Sl   Oct24   2:53 /usr/lib64/firefox/firefox
+trevor     32289  0.0  0.3 227764 30100 ?        Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20220503104453 -prefsLen 1 -prefMapSize 249062 -appDir /usr/lib64/firefox/browser 32207 true socket
+trevor     32314  0.0  1.3 2661944 105856 ?      Sl   Oct24   0:03 /usr/lib64/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 191 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32346  1.1  3.8 2956672 292820 ?      Sl   Oct24   3:21 /usr/lib64/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 231 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32408  0.0  0.9 2654608 74312 ?       Sl   Oct24   0:01 /usr/lib64/firefox/firefox -contentproc -childID 5 -isForBrowser -prefsLen 5037 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32483  0.0  0.8 2631016 67196 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 6 -isForBrowser -prefsLen 5809 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32576  1.4  3.1 2960520 239236 ?      Sl   Oct24   4:07 /usr/lib64/firefox/firefox -contentproc -childID 7 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32603  0.0  1.0 2639832 78512 ?       Sl   Oct24   0:01 /usr/lib64/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32629  0.0  0.6 324256 49492 ?        Sl   Oct24   0:02 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20220503104453 -prefsLen 8254 -prefMapSize 249062 -appDir /usr/lib64/firefox/browser 32207 true rdd
+trevor     32669  0.0  0.9 2634604 73040 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 11 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32726  0.0  1.0 2645896 75980 ?       Sl   Oct24   0:01 /usr/lib64/firefox/firefox -contentproc -childID 12 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32729  0.0  0.9 2635648 75056 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 13 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32732  0.0  0.9 2632600 74632 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 14 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32788  0.0  0.9 2631560 68644 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 15 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32812  0.0  0.9 2631564 73448 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 16 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32815  0.0  0.9 2629512 70012 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 17 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32865 59.7  3.6 2901248 275240 ?      Rl   Oct24 174:57 /usr/lib64/firefox/firefox -contentproc -childID 18 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32869  0.0  0.9 2633608 75136 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 19 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32915  0.0  0.9 2629512 71992 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 20 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32918  0.0  0.9 2630508 72672 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 21 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     32964  0.0  0.1 464604  8636 ?        Sl   Oct24   0:01 /usr/lib64/speech-dispatcher-modules/sd_espeak-ng /etc/speech-dispatcher/modules/espeak-ng.conf
+trevor     32971  0.0  0.0 160100  4796 ?        Sl   Oct24   0:01 /usr/lib64/speech-dispatcher-modules/sd_dummy /etc/speech-dispatcher/modules/dummy.conf
+trevor     32974  0.0  0.0 372212  4412 ?        Ssl  Oct24   0:00 /usr/bin/speech-dispatcher --spawn --communication-method unix_socket --socket-path /run/user/1000/speech-dispatcher/speechd.sock
+trevor     33008  0.0  0.9 2631552 75260 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 22 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     33178  0.0  0.9 2629484 72324 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 28 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     33179  0.0  0.7 2625476 58300 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 29 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     33219  0.0  0.7 2625476 58924 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 30 -isForBrowser -prefsLen 8254 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+trevor     33254  0.0  0.7 2625476 58324 ?       Sl   Oct24   0:00 /usr/lib64/firefox/firefox -contentproc -childID 31 -isForBrowser -prefsLen 8506 -prefMapSize 249062 -jsInitLen 277212 -parentBuildID 20220503104453 -appDir /usr/lib64/firefox/browser 32207 true tab
+root       51505  0.0  0.0      0     0 ?        I    Oct24   0:01 [kworker/0:3-events]
+root       51535  0.1  0.5 269304 38744 ?        Ss   Oct24   0:07 /usr/libexec/sssd/sssd_kcm --uid 0 --gid 0 --logger=files
+root       55176  0.0  0.0      0     0 ?        I    Oct24   0:00 [kworker/1:0-inet_frag_wq]
+root       55214  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kworker/0:0H-acpi_thermal_pm]
+root       57093  0.1  0.0      0     0 ?        I    Oct24   0:02 [kworker/u8:5-btrfs-worker]
+root       58581  0.0  0.0      0     0 ?        I<   Oct24   0:01 [kworker/u9:1-btrfs-worker-high]
+root       58747  0.2  0.0      0     0 ?        I    Oct24   0:02 [kworker/u8:0-dm_vblank_control_workq]
+root       58748  0.1  0.0      0     0 ?        I    Oct24   0:01 [kworker/u8:1-btrfs-endio-write]
+root       59310  0.1  0.0      0     0 ?        I    Oct24   0:02 [kworker/u8:7-btrfs-endio-write]
+root       59405  0.0  0.0      0     0 ?        I    Oct24   0:00 [kworker/1:1-events]
+root       60243  0.1  0.0      0     0 ?        I    Oct24   0:00 [kworker/u8:2-btrfs-endio-write]
+root       60250  0.0  0.0      0     0 ?        I    Oct24   0:00 [kworker/0:0-inet_frag_wq]
+root       60362  0.0  0.0      0     0 ?        I<   Oct24   0:00 [kworker/u9:0-btrfs-worker-high]
+trevor     60658  0.0  0.1 227916  9752 pts/3    Ss   Oct24   0:00 /usr/bin/bash
+root       60875  0.2  0.0      0     0 ?        I<   Oct24   0:00 [kworker/u9:2-rtw_tx_wq]
+root       61252  0.0  0.0      0     0 ?        I    Oct24   0:00 [kworker/0:1-events]
+root       61255  0.0  0.0      0     0 ?        I    Oct24   0:00 [kworker/0:2]
+root       61578  0.7  0.0      0     0 ?        I    00:00   0:01 [kworker/u8:3-events_unbound]
+root       61581  0.4  0.0      0     0 ?        I    00:00   0:00 [kworker/u8:4-btrfs-endio-meta]
+root       61582  0.0  0.1  17316  8316 ?        S    00:00   0:00 systemd-userwork
+root       61583  0.0  0.1  17316  7716 ?        S    00:00   0:00 systemd-userwork
+root       61584  0.0  0.1  17316  7692 ?        S    00:00   0:00 systemd-userwork
+root       62238  0.6  0.0      0     0 ?        I    00:00   0:00 [kworker/u8:6-btrfs-delalloc]
+root       62258  0.9  0.0      0     0 ?        I    00:01   0:01 [kworker/u8:8-btrfs-endio-write]
+root       62259  0.0  0.0      0     0 ?        I    00:01   0:00 [kworker/u8:9]
+root       62260  0.0  0.0      0     0 ?        I    00:01   0:00 [kworker/u8:10-btrfs-endio-write]
+root       62295  0.0  0.0      0     0 ?        I    00:01   0:00 [kworker/1:2-events]
+root       62329  0.0  0.0      0     0 ?        I    00:01   0:00 [kworker/1:3-events]
+root       63066  0.0  0.0      0     0 ?        I<   00:01   0:00 [kworker/u9:3-btrfs-worker-high]
+root       63067  0.0  0.0      0     0 ?        I<   00:01   0:00 [kworker/u9:4-btrfs-worker-high]
+root       63117  0.0  0.0      0     0 ?        I    00:01   0:00 [kworker/u8:11]
+trevor     63300  0.0  0.0 225284  3784 pts/3    R+   00:02   0:00 ps auxw

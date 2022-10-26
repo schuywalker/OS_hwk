@@ -99,3 +99,35 @@ opposed to our simple conception of code/stack/heap?
 
 8. Finally, let’s run pmap on your memory-user program, with different amounts of used memory. What do you see here? Does the
 output from pmap match your expectations?
+
+	2600 kb total. I'm surprised that heap is about the same as stack when it's running in an inifite loop,
+	but I guess it makes sense considering the loop isnt really allocating any memory space. The program code
+	takes up 5 pages, one of which is executable and one of which is writable. I don't understand why there's 
+	a writable file in the program code section. The buld of the memory the program used is libc and linux.
+
+
+	output: 
+	
+0000000000400000      4K r---- memory-user
+0000000000401000      4K r-x-- memory-user
+0000000000402000      4K r---- memory-user
+0000000000403000      4K r---- memory-user
+0000000000404000      4K rw--- memory-user
+000000000181b000    132K rw---   [ anon ]
+00007f683bc5b000    160K r---- libc.so.6
+00007f683bc83000   1488K r-x-- libc.so.6
+00007f683bdf7000    352K r---- libc.so.6
+00007f683be4f000     16K r---- libc.so.6
+00007f683be53000      8K rw--- libc.so.6
+00007f683be55000     52K rw---   [ anon ]
+00007f683be7b000      8K r---- ld-linux-x86-64.so.2
+00007f683be7d000    152K r-x-- ld-linux-x86-64.so.2
+00007f683bea3000     44K r---- ld-linux-x86-64.so.2
+00007f683beaf000      8K r---- ld-linux-x86-64.so.2
+00007f683beb1000      8K rw--- ld-linux-x86-64.so.2
+00007f683beb3000     16K rw---   [ anon ]
+00007ffc0a524000    136K rw---   [ stack ]
+00007ffc0a5f3000     16K r----   [ anon ]
+00007ffc0a5f7000      8K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             2628K
