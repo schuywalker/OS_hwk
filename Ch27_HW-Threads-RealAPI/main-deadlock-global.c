@@ -12,8 +12,8 @@ void* worker(void* arg) {
 	Pthread_mutex_lock(&m1);
 	Pthread_mutex_lock(&m2);
     } else {
-	Pthread_mutex_lock(&m2);
 	Pthread_mutex_lock(&m1);
+	Pthread_mutex_lock(&m2);
     }
     Pthread_mutex_unlock(&m1);
     Pthread_mutex_unlock(&m2);

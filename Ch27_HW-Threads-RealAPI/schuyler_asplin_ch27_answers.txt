@@ -1,23 +1,112 @@
+Schuyler Asplin
+CSCD 340 OS
+Ch27 Thread-API (code)
+
 Questions
-1. First build main-race.c. Examine the code so you can see the (hopefully obvious) data race in the code. Now run helgrind (by typing valgrind --tool=helgrind main-race) to see how it reports the race. Does it point to the right lines of code? What other information does it give to you?
 
-2. What happens when you remove one of the offending lines of code? Now add a lock around one of the updates to the shared variable, and then around both. What does helgrind report in each of these cases?
 
-3. Now let’s look at main-deadlock.c. Examine the code. This code has a problem known as deadlock (which we discuss in much more depth in a forthcoming chapter). Can you see what problem it might have?
+1. First build main-race.c. Examine the code so you can see the (hopefully obvious) data race in the code. 
+Now run helgrind (by typing valgrind --tool=helgrind main-race) to see how it reports the race. 
+Does it point to the right lines of code? What other information does it give to you?
 
-4. Nowrunhelgrindonthiscode.Whatdoeshelgrindreport?
+    Helgrind indicates a possible data race of size 4 bytes (because balance is an int)
+    between thread #1 (main) and thread #2 (p). It actually reports it as two different errors, since balance
+    is updated in 2 places. It indicates addresses that I believe correspond to line numbers (or the addresses 
+    of said lines of instructions), both in hexadecimal and in base10, but neither of them correspond to
+    the lines of code in the program as we see them. I've looked through the command-line options and 
+    it doesn't look like there's an option to see line numbers corresponding to the source code, but
+    I do believe it's pointing to the correct lines of code. The other important piece of information it's 
+    giving us is the summary of locks held by the threads when the race conditions occur. In this case,
+    there are none.
+
+2. What happens when you remove one of the offending lines of code? 
+Now add a lock around one of the updates to the shared variable, and then around both. 
+What does helgrind report in each of these cases?
+
+    I removed line 15 (incrementing balance in main) and helgrind detected 0 errors.
+    
+    One lock around worker's balance increment: this produces 2 errors. Here it actually does 
+    print the lines in corresponding to the code. Having just one lock around the shared variable 
+    doesn't solve the race condition. I made sure that the lock is in heap memory, but that doesn't solve it.
+
+    Two locks: 0 errors.
+
+
+
+3. Now let’s look at main-deadlock.c. 
+Examine the code. This code has a problem known as deadlock 
+(which we discuss in much more depth in a forthcoming chapter). 
+Can you see what problem it might have?
+
+    This is a lock ordering error.
+    Imagining the two threads running at the same time, we're locking p1 
+    with m1 at the same time we're locking p2 with m2. Then we try to lock
+    p1 with m2 and p2 with m1, but locks haven't been unlocked yet. Because of
+    this, the threads will wait indefinitely in their respective if/ else block.
+
+    Somehow the program still finishes, so it would seem that they don't actually
+    wait indefinitely, but instead move on from the lock methods. 
+
+
+4. Now run helgrind on this code. What does helgrind report?
+
+    Helgrind detects the deadlock, but I find the output incredibly confusing.
+    Luckily we do get line numbers in this run of the problems in the output.
+    Doing my best to paraphrase the output:
+
+    Helgrind tells us that the lock order "0xB before 0xA" was violated.
+    Observed (incorrect) order is 0xB, 0xA.
+    Required order established in code is 0xA, 0xB.
+    Lock at 0xA (m1) followed by 0xB (m2).
+
+    If we switch lines 16 and 17 (so that both threads get locked (and unlocked) 
+    in the same order) then helgrind detects 0 errors.
 
 5. Now run helgrind on main-deadlock-global.c. Examine the code;
 does it have the same problem that main-deadlock.c has? Should helgrind
 be reporting the same error? What does this tell you about tools like helgrind?
 
-6. Let’s next look at main-signal.c. This code uses a variable (done) to signal that the child is done and that the parent can now continue. Why is this code inefficient? (what does the parent end up spending its time doing,
+    This program has the same error as the non-global version. 
+    The lines it observes are in this order: 15, 16, 12, 13, meaning that p2 got the g lock before p1.
+    I don't actually see how this program is having trouble. One thread gets the global lock, then
+    it gets the other two, and then all 3 are released and the same is true for the other thread.
+    Maybe helgrind detects potential deadlock situations where there aren't any (or more likely I'm
+    missing the deadlock).
+    Switching lines 15 and 16 fixes this one too... but I don't see why that matters, so I'm starting to
+    feel more confident that helgrind is getting a false positive on the error.
+    
+
+6. Let’s next look at main-signal.c. 
+This code uses a variable (done) to signal that the child is done and that the parent can now continue. 
+Why is this code inefficient? (what does the parent end up spending its time doing,
 particularly if the child thread takes a long time to complete?)
 
-7. Now run helgrind on this program. What does it report? Is the code
-correct?
+    The print order is correct. It uses a spin lock to have main wait on the
+    thread, which is inherintly inneficient because it's implemented with an infinitely executing loop.    
 
-8. Now look at a slightly modified version of the code, which is found in
-main-signal-cv.c. This version uses a condition variable to do the sig- naling (and associated lock). Why is this code preferred to the previous version? Is it correctness, or performance, or both?
+7. Now run helgrind on this program. What does it report? Is the code correct?
+
+    24 errors in 3 contexts, but the code output is correct. It's detecting a data race around done, 
+    which is true. Shared variables should be modified in synchronized blocks. But in this case, main is
+    only reading the value from done and not modifying it. I'm not sure if that can result in worker's
+    write malfunctioning or not! 
+    I think the 24 errors, which are all around main, are the number of times the while loop executed,
+    because the errors all center around the shared "done" variable.
+    Not sure why else it would report so many errors, nor do I understand what the 3 contexts refer to.
+
+8. Now look at a slightly modified version of the code, which is found in main-signal-cv.c. 
+This version uses a condition variable to do the signaling (and associated lock). 
+Why is this code preferred to the previous version? Is it correctness, or performance, or both?
+
+    It also prints in the correct order. First off, it uses a synchronizer, which guarantees 
+    there won't be race conditions when changing s.done, since only one thread can execute
+    any one of those methods at a time.
+    Additionally, I believe it's circumventing the infinite loop with the Pthread_cond_wait method.
+    It uses signals to wait, which are likely implemented in less resource intesive ways than
+    and infinite loop. 
+
 
 9. Once again run helgrind on main-signal-cv. Does it report any errors?
+
+    0 errors. This implementation is more complex, but it's using the intended tools that c
+    provides for ordering events between threads. 
