@@ -26,13 +26,11 @@ int main(int argc, char *argv[]) {
     // init semaphore here
     sem_init(&s, 0, 0);
     pthread_create(&p, NULL, child, NULL);
-    // pthread_join(p, NULL);
     
     // use semaphore here
     sem_wait(&s);
     
     printf("parent: end\n");
-    printf("\n%d", sem_getvalue(&s, NULL));
     return 0;
 }
 
