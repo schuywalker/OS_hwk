@@ -24,8 +24,8 @@ void rwlock_init(rwlock_t *rw) {
 }
 
 void rwlock_acquire_readlock(rwlock_t *rw) {
-    sem_wait(&rw->lock);
     sem_wait(&rw->noWriterWaitingLock);
+    sem_wait(&rw->lock);
     rw->readers++;
     sem_post(&rw->noWriterWaitingLock);
     if (rw->readers == 1) { // first reader gets writelock
@@ -53,28 +53,6 @@ void rwlock_release_writelock(rwlock_t *rw) {
     sem_post(&rw->writelock);
 }
 
-typedef struct __rwlock_t {
-} rwlock_t;
-
-
-void rwlock_init(rwlock_t *rw) {
-}
-
-void rwlock_acquire_readlock(rwlock_t *rw) {
-}
-
-void rwlock_release_readlock(rwlock_t *rw) {
-}
-
-void rwlock_acquire_writelock(rwlock_t *rw) {
-}
-
-void rwlock_release_writelock(rwlock_t *rw) {
-}
-
-//
-// Don't change the code below (just use it!)
-// 
 
 int loops;
 int value = 0;
